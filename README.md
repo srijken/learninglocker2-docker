@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/srijken/learninglocker2-docker.svg?branch=master)](https://travis-ci.org/srijken/learninglocker2-docker)
+
 # Learning Locker version 2 in Docker
 
 It is a dockerized version of Learning Locker (LL) version 2 based on the installation guides at http://docs.learninglocker.net/guides-custom-installation/
