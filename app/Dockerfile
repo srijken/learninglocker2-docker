@@ -25,7 +25,8 @@ RUN git clone https://github.com/LearningLocker/learninglocker.git /opt/learning
     && cd /opt/learninglocker \
     && git checkout $LL_TAG \
     && yarn install \
-    && yarn build-all
+    && yarn build-all \
+    && npm install -g pm2
 
 WORKDIR /opt/learninglocker
 
@@ -42,5 +43,6 @@ COPY env.template .env.template
 COPY entrypoint-common.sh entrypoint-common.sh
 COPY entrypoint-ui.sh entrypoint-ui.sh
 
-ENTRYPOINT ["./entrypoint-common.sh"]
+#ENTRYPOINT ["./entrypoint-common.sh"]
+ENTRYPOINT ["pm2 start pm2/all.json"]
 
